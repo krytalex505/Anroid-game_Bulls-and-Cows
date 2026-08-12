@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Ночная тема (автоматически применяется в темном режиме) -->
+    <style name="Theme.BullsAndCows" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">#FFDD2D</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#FFDD2D</item>
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">#000000</item>
+    </style>
+</resources>
