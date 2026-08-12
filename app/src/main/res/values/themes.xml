@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основная тема приложения (AppCompat) -->
+    <style name="Theme.BullsAndCows" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FFDD2D</item> <!-- T‑Bank желтый -->
+        <item name="colorPrimaryDark">#1A1A1A</item> <!-- T‑Bank черный -->
+        <item name="colorAccent">#FFDD2D</item> <!-- T‑Bank желтый -->
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:statusBarColor">#FFDD2D</item>
+    </style>
+
+    <!-- Тема для заставки -->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

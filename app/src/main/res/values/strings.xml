@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Название приложения -->
+    <string name="app_name">Быки и Коровы</string>
+    <string name="connection_in_progress">Подключение уже выполняется</string>
+    <string name="operation_in_progress">Операция уже выполняется</string>
+    <string name="search_already_running">Поиск уже запущен</string>
+    <string name="permissions_required">Требуются разрешения</string>
+    <string name="location_permission_explanation">Для поиска устройств нужно разрешение на местоположение</string>
+    <string name="permissions_granted">✅ Разрешения получены</string>
+    <string name="permissions_required_all">❌ Нужны все разрешения</string>
+    <string name="bluetooth_enabled">✅ Bluetooth включен</string>
+    <string name="bluetooth_required">❌ Нужен Bluetooth</string>
+    <string name="creating_game">🟢 Создание игры...</string>
+    <string name="game_created">✅ Игра создана. Жду подключения...</string>
+    <string name="error_format">❌ Ошибка: %s</string>
+    <string name="searching_games">🔍 Поиск игр...</string>
+    <string name="searching_found">🔍 Поиск... Найдено: %d</string>
+    <string name="connecting">🔄 Подключение...</string>
+    <string name="connection_failed">❌ Ошибка подключения</string>
+    <string name="connection_from">📞 Подключение от %s</string>
+    <string name="connected">✅ Подключено!</string>
+    <string name="disconnected">📴 Отключено</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Отмена</string>
+    <!-- Меню -->
+    <string name="play">Играть</string>
+    <string name="about">Об игре</string>
+    <string name="settings">Настройки</string>
+    <string name="statistics">Статистика</string>
+    <string name="back">Назад</string>
+    <string name="loading">Загрузка...</string>
+
+    <!-- Выбор длины слова -->
+    <string name="select_word_length">Выберите длину слова</string>
+    <string name="letters_3">3 буквы</string>
+    <string name="letters_4">4 буквы</string>
+    <string name="letters_5">5 букв</string>
+    <string name="letters_6">6 букв</string>
+    <string name="random">Рандом</string>
+
+    <!-- Выбор режима -->
+    <string name="select_mode">Выберите режим игры</string>
+    <string name="one_player">1 ИГРОК</string>
+    <string name="two_players">2 ИГРОКА</string>
+
+    <!-- Игровой экран -->
+    <string name="attempt">Попытка %d/%d</string>
+    <string name="analytics">Аналитика</string>
+    <string name="bulls">Быки</string>
+    <string name="cows">Коровы</string>
+    <string name="zeros">Нулевые</string>
+    <string name="alphabet">АЛФАВИТ</string>
+
+    <!-- Кнопки -->
+    <string name="btn_move">ХОД</string>
+    <string name="btn_zero">НУЛИ</string>
+    <string name="btn_clear">СБРОС</string>
+    <string name="btn_break">РАЗОБ</string>
+    <string name="btn_compare">СРАВН</string>
+    <string name="btn_log">ЖУРНАЛ</string>
+    <string name="btn_google">ГУГЛ</string>
+    <string name="btn_pin">ПИН</string>
+
+    <!-- Сообщения -->
+    <string name="win">🎉 ПОБЕДА!</string>
+    <string name="game_over">Игра окончена! Слово: %s</string>
+    <string name="enter_all_letters">Введите все буквы!</string>
+    <string name="zeros_removed">Нулевые буквы удалены</string>
+    <string name="game_reset">Игра сброшена</string>
+    <string name="word_broken">Слово разобрано</string>
+    <string name="saved_to_log">Сохранено в журнал</string>
+    <string name="state_saved">Состояние сохранено</string>
+    <string name="select_two_words">Выберите два слова</string>
+</resources>
