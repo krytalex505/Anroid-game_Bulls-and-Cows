@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Желтый фон -->
+    <item>
+        <color android:color="#FFDD2D" />
+    </item>
+
+    <!-- Логотип по центру (когда добавите) -->
+    <item
+        android:drawable="@drawable/my_logo"
+        android:gravity="center">
+    </item>
+</layer-list>
