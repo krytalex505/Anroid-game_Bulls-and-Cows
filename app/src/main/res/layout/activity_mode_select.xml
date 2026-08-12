@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите режим игры"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="60dp" />
+
+    <Button
+        android:id="@+id/button_one_player"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:text="1 ИГРОК"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FFDD2D"
+        android:textColor="#1A1A1A"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_two_players"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="2 ИГРОКА"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FFDD2D"
+        android:textColor="#1A1A1A"
+        android:textAllCaps="false" />
+
+    <!-- Кнопка НАЗАД внизу -->
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:text="НАЗАД"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#E0E0E0"
+        android:textColor="#1A1A1A" />
+
+</LinearLayout>

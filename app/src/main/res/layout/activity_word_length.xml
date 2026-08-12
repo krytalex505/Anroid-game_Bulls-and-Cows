@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите длину слова"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/length3Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="3 БУКВЫ"
+        android:textSize="16sp"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/length4Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="4 БУКВЫ"
+        android:textSize="16sp"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/length5Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="5 БУКВ"
+        android:textSize="16sp"
+        android:backgroundTint="#FF9800"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/length6Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="6 БУКВ"
+        android:textSize="16sp"
+        android:backgroundTint="#9C27B0"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/randomButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="РАНДОМ"
+        android:textSize="16sp"
+        android:backgroundTint="#F44336"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="НАЗАД"
+        android:textSize="16sp"
+        android:backgroundTint="#E0E0E0"
+        android:textColor="#1A1A1A" />
+
+</LinearLayout>

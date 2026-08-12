@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_word_length"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/tbank_black"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/letters_3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/tbank_yellow"
+        android:textColor="@color/black"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/letters_4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/tbank_yellow"
+        android:textColor="@color/black"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/letters_5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/tbank_yellow"
+        android:textColor="@color/black"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_6"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/letters_6"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/tbank_yellow"
+        android:textColor="@color/black"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button_random"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/random"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/tbank_light_gray"
+        android:textColor="@color/black"
+        android:textAllCaps="false" />
+
+</LinearLayout>

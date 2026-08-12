@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Информация"
+        android:textSize="14sp"
+        android:textColor="#1A1A1A"
+        android:lineSpacingExtra="2dp"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="НАЗАД"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:backgroundTint="#E0E0E0"
+        android:textColor="#1A1A1A"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="СТАТИСТИКА"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/total_games_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Всего игр: 0"
+        android:textSize="18sp"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/wins_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Побед: 0"
+        android:textSize="18sp"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/win_rate_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Процент побед: 0%"
+        android:textSize="18sp"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/avg_attempts_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Среднее попыток: 0"
+        android:textSize="18sp"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="История игр"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/history_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="ОЧИСТИТЬ"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="НАЗАД"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#1A1A1A" />
+
+    </LinearLayout>
+
+</LinearLayout>

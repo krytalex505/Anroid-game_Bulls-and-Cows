@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="4dp">
+
+    <!-- Верхняя панель -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Время: 00:00"
+            android:textSize="12sp"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@+id/attempts_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Попытка 1/25"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#666666"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/info_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="ℹ️"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/circle_background"
+                android:layout_marginEnd="2dp" />
+
+            <TextView
+                android:id="@+id/stats_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="📊"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:background="@drawable/circle_background" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Контейнер для двух игроков -->
+    <LinearLayout
+        android:id="@+id/two_players_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <!-- Игрок 1 -->
+        <LinearLayout
+            android:id="@+id/player1_panel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/player1_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ИГРОК 1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:gravity="center" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <!-- Колонка А (слова) -->
+                    <GridLayout
+                        android:id="@+id/player1_grid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:columnCount="6"
+                        android:rowCount="25"
+                        android:alignmentMode="alignMargins"
+                        android:columnOrderPreserved="true" />
+
+                    <!-- Колонка B (счет) -->
+                    <LinearLayout
+                        android:id="@+id/player1_score_container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="СЧЕТ"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="#E0E0E0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#CCCCCC"
+            android:layout_marginHorizontal="2dp" />
+
+        <!-- Игрок 2 -->
+        <LinearLayout
+            android:id="@+id/player2_panel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/player2_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ИГРОК 2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:gravity="center" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <!-- Колонка А (слова) -->
+                    <GridLayout
+                        android:id="@+id/player2_grid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:columnCount="6"
+                        android:rowCount="25"
+                        android:alignmentMode="alignMargins"
+                        android:columnOrderPreserved="true" />
+
+                    <!-- Колонка B (счет) -->
+                    <LinearLayout
+                        android:id="@+id/player2_score_container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="1dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="СЧЕТ"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:background="#E0E0E0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Для одного игрока / Bluetooth -->
+    <ScrollView
+        android:id="@+id/game_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <!-- Колонка А (слова) -->
+            <GridLayout
+                android:id="@+id/single_player_grid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:columnCount="6"
+                android:rowCount="25"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="true" />
+
+            <!-- Колонка B (счет) -->
+            <LinearLayout
+                android:id="@+id/single_score_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="СЧЕТ"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="#E0E0E0" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- АНАЛИТИКА -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="АНАЛИТИКА"
+            android:textSize="10sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:gravity="center">
+
+            <!-- Быки -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="БЫКИ"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:background="#FF5722"
+                    android:paddingVertical="2dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FF5722"
+                    android:padding="2dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/bulls_input_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Коровы -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="КОРОВЫ"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:background="#FFC107"
+                    android:paddingVertical="2dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFC107"
+                    android:padding="2dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/cows_input_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Нулевые -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="НУЛЕВЫЕ"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:background="#424242"
+                    android:paddingVertical="2dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#424242"
+                    android:padding="2dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/zeros_input_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- КНОПКИ (первый ряд) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginBottom="1dp">
+
+        <Button
+            android:id="@+id/btn_move"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:text="ХОД"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FFDD2D"
+            android:textColor="#1A1A1A" />
+
+        <Button
+            android:id="@+id/btn_zero"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:text="НУЛИ"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:backgroundTint="#424242"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:text="СБРОС"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#1A1A1A" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:text="⌫"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- КНОПКИ (второй ряд) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="2dp">
+
+        <Button
+            android:id="@+id/btn_save_result"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:text="СОХР"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_pin"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:text="ПИН"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#1A1A1A" />
+    </LinearLayout>
+
+    <!-- КЛАВИАТУРА -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="КЛАВИАТУРА"
+        android:textSize="10sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="1dp" />
+
+    <!-- Первый ряд -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+        <Button android:id="@+id/btn_y" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Й" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_c" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ц" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_u" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="У" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_k" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="К" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_e" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Е" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_n" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Н" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_g" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Г" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_sh" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ш" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_shch" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Щ" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_z" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="З" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- Второй ряд -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+        <Button android:id="@+id/btn_h" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Х" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_soft" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ъ" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_f" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ф" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_yi" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ы" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_v" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="В" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_a" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="А" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_p" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="П" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_r" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Р" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_o" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="О" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_l" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Л" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- Третий ряд -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+        <Button android:id="@+id/btn_d" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Д" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_zh" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ж" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_e_rev" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Э" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_ya" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Я" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_ch" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ч" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_s" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="С" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_m" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="М" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_i" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="И" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_t" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Т" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_soft2" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ь" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+    </LinearLayout>
+
+    <!-- Четвёртый ряд -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button android:id="@+id/btn_b" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Б" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+        <Button android:id="@+id/btn_yu" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1" android:layout_margin="0.5dp" android:text="Ю" android:backgroundTint="#F0F0F0" android:textColor="#000000" android:textSize="10sp"/>
+    </LinearLayout>
+
+</LinearLayout>
